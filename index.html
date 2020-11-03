@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Make Me A Drink!</title>
 </head>
-<body>
-    
-</body>
+<ons-page>
+    <ons-toolbar style="height: auto;">
+        <h1 class="center">Make Me A Drink!</h1>
+    </ons-toolbar>
+    <div>
+
+        <!-- Need to use col,row -->
+        <ons-input id="drink" placeholder="Name of the drink?" modifier="underbar" style="width: 300px;"></ons-input>
+        <ons-button>Search</ons-button></br>
+
+        <ons-input id="liquor" placeholder="Type of liquor?" modifier="underbar" style="width: 300px;">
+        </ons-input>
+        <ons-button>Search</ons-button>
+        <div style="text-align: center">
+            <iframe src="https://giphy.com/embed/VFZdyyGzwQpbvZ5g91" width="270" height="480" frameBorder="0"
+                class="giphy-disable" allowFullScreen></iframe>
+
+
+
+        </div>
+    </div>
+
+
+
+    <script src="assets\script.js"></script>
+
+</ons-page>
+
 </html>
