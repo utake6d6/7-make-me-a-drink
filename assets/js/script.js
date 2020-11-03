@@ -2,7 +2,6 @@
 
 
 
-
 var liquor = ''
 var yelpSearch = ''
 var recipe = [];
@@ -31,9 +30,7 @@ for (let i = 0; i < drinkArr.lenght; i++){
  drinks.appendChild(drinkEl);
 }
 
-
-
-
+Will also need localStocage to paste to past searches
 */
 //this is the search for recipe by name of drink
 function getRecpie() {
