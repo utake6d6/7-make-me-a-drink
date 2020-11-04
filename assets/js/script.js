@@ -9,6 +9,8 @@ var glass = document.createElement('img');
 var glassEl = document.querySelector('#glass')
 
 // THis is search by liquor give other drinks
+// NO PAT ZONE!!!!!!!!!!!!!!!!!!
+// PAT Im Serious
 function getdrink() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor)
     .then(function (response) {
@@ -32,6 +34,7 @@ for (let i = 0; i < drinkArr.lenght; i++){
 
 Will also need localStocage to paste to past searches
 */
+// Pat Paggi
 //this is the search for recipe by name of drink
 function getRecpie() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drink)
