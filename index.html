@@ -1,45 +1,54 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <link rel="stylesheet" href="assets\css\style.css" />
     <title>Make Me A Drink!</title>
 </head>
 
 <body>
-    <header style="height: auto;">
-        <h1 class="center">Make Me A Drink!</h1>
+    <!-- header text links to home page -->
+    <header>
+        <h1 href="#">Make Me A Drink!</h1>
     </header>
-    <div class="row">
 
-        <!-- Need to use col,row -->
-        <div id="drinkSearch">
-            <input id="drink" placeholder="Name of the drink?" modifier="underbar" style="width: 300px;"></input>
-            <button>Search</button></br>
-
-            <input id="liquor" placeholder="Type of liquor?" modifier="underbar" style="width: 300px;">
-            </input>
+    <!-- drink search form by drink name and by liquor-->
+    <div class="grid">
+        <div class="row" id="drinkSearch">
+            <input class="cell-3" id="drink" placeholder="Name of the drink" modifier="underbar"
+                style="width: 300px;"></input>
             <button>Search</button>
-        </div>
-        <div>
-            <ul id="searchHistory">
-
+            <!-- search history container -->
+            <ul class="cell-4 offset-3" id="searchHistory"> Search History
             </ul>
         </div>
-        <div id="img">
-            <iframe src="https://giphy.com/embed/VFZdyyGzwQpbvZ5g91" width="270" height="480" frameBorder="0"
-                class="giphy-disable" allowFullScreen></iframe>
+        <div class="row" id="drinkSearch">
+            <input class="cell-3" id="liquor" placeholder="Type of liquor" modifier="underbar"
+                style="width: 300px;"></input>
+            <button>Search</button>
         </div>
     </div>
 
+    <!-- 8 hard liquor image buttons -->
+    <!-- why is the left margin so strange? -->
+    <div>
+        <h5>Click Your Desired Liquor Below</h5>
+        <div class="grid">
+            <div class="row">
+                <img class="cell 3" src="...">
+                <img class="cell 3" src="...">
+                <img class="cell 3" src="...">
+                <img class="cell 3" src="...">
+            </div>
 
-
-    <script src="assets\js\script.js"></script>
-
-</body>
-
-</html>
+            <div class="row">
+                <img class="cell 3" src="...">
+                <img class="cell 3" src="...">
+                <img class="cell 3" src="...">
+                <img class="cell 3" src="...">
+            </div>
+        </div>
