@@ -10,7 +10,7 @@ var drinks = [];
 var glass = document.createElement('img');
 var glassEl = document.querySelector('#glass')
 var lists = document.querySelector('#list')
-
+var history = JSON.parse(localStorage.getItem('history'))
 // THis is search by liquor give other drinks
 // NO PAT ZONE!!!!!!!!!!!!!!!!!!  ****NOTE**still need to link the 2 other pages*!!
 // PAT Im Serious
@@ -62,7 +62,8 @@ var recipeUl = document.querySelector('#recipe')
 // THis is the recipe!! done until getDrinks is up
 function showRecipe() {
   //still working on page2
-
+  history.push(recipe)
+  localStorage.setItem('history', JSON.stringify(history))
 
   var ingredients = [recipe.drinks[0].strIngredient1, recipe.drinks[0].strIngredient2, recipe.drinks[0].strIngredient3, recipe.drinks[0].strIngredient4, recipe.drinks[0].strIngredient5, recipe.drinks[0].strIngredient6, recipe.drinks[0].strIngredient7, recipe.drinks[0].strIngredient8, recipe.drinks[0].strIngredient9, recipe.drinks[0].strIngredient10, recipe.drinks[0].strIngredient11, recipe.drinks[0].strIngredient12, recipe.drinks[0].strIngredient13, recipe.drinks[0].strIngredient14, recipe.drinks[0].strIngredient15];
   var measure = [recipe.drinks[0].strMeasure1, recipe.drinks[0].strMeasure2, recipe.drinks[0].strMeasure3, recipe.drinks[0].strMeasure4, recipe.drinks[0].strMeasure5, recipe.drinks[0].strMeasure6, recipe.drinks[0].strMeasure7, recipe.drinks[0].strMeasure8, recipe.drinks[0].strMeasure9, recipe.drinks[0].strMeasure10, recipe.drinks[0].strMeasure11, recipe.drinks[0].strMeasure12, recipe.drinks[0].strMeasure13, recipe.drinks[0].strMeasure14, recipe.drinks[0].strMeasure15];
