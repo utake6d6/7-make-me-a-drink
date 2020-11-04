@@ -1,15 +1,18 @@
 "use strict";
 
 
-
-var liquor = ''
+// will have to update VAR
+var drink = 'screwdriver' //TEMP VAR!!
+var liquor = 'rum'        //TEMP VAR!!
 var yelpSearch = ''
 var recipe = [];
+var drinks = [];
 var glass = document.createElement('img');
 var glassEl = document.querySelector('#glass')
+var lists = document.querySelector('#list')
 
 // THis is search by liquor give other drinks
-// NO PAT ZONE!!!!!!!!!!!!!!!!!!
+// NO PAT ZONE!!!!!!!!!!!!!!!!!!  ****NOTE**still need to link the 2 other pages*!!
 // PAT Im Serious
 function getdrink() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor)
@@ -17,9 +20,9 @@ function getdrink() {
       return response.json();
     })
     .then(function (json) {
-
+      drinks = json
       console.log(json);
-
+      showDrinks()
     })
 }
 /* will need a for loop for the array of drink options
@@ -34,9 +37,15 @@ for (let i = 0; i < drinkArr.lenght; i++){
 
 Will also need localStocage to paste to past searches
 */
+// From liquor we need an array? Then pick the frist one to add to getRecipe!!!
+
+
+
+
+
 // Pat Paggi
 //this is the search for recipe by name of drink
-function getRecpie() {
+function getRecipe() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drink)
     .then(function (response) {
       return response.json();
@@ -44,38 +53,52 @@ function getRecpie() {
     .then(function (json) {
       recipe = json
       showRecipe()
-      console.log(json);
+      console.log(recipe);
 
     })
 }
-
-// THis is the recipe!!
+var glassEl = document.querySelector('#glass');
+var recipeUl = document.querySelector('#recipe')
+// THis is the recipe!! done until getDrinks is up
 function showRecipe() {
-  // this is the pic of the glass
-  glass.src = "https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg";
-  glassEl.appendChild(glass);
-  for (let i = 0; i < recipe.length; i++) {
+  //still working on page2
 
-    var repiceEl = document.createElement('p');
-    // will have to add ;onClick or separate search box?
-    repiceEl.innerHTML = recipe[i];
-    recipeUl.appendChild(repiceEl);
 
+  var ingredients = [recipe.drinks[0].strIngredient1, recipe.drinks[0].strIngredient2, recipe.drinks[0].strIngredient3, recipe.drinks[0].strIngredient4, recipe.drinks[0].strIngredient5, recipe.drinks[0].strIngredient6, recipe.drinks[0].strIngredient7, recipe.drinks[0].strIngredient8, recipe.drinks[0].strIngredient9, recipe.drinks[0].strIngredient10, recipe.drinks[0].strIngredient11, recipe.drinks[0].strIngredient12, recipe.drinks[0].strIngredient13, recipe.drinks[0].strIngredient14, recipe.drinks[0].strIngredient15];
+  var measure = [recipe.drinks[0].strMeasure1, recipe.drinks[0].strMeasure2, recipe.drinks[0].strMeasure3, recipe.drinks[0].strMeasure4, recipe.drinks[0].strMeasure5, recipe.drinks[0].strMeasure6, recipe.drinks[0].strMeasure7, recipe.drinks[0].strMeasure8, recipe.drinks[0].strMeasure9, recipe.drinks[0].strMeasure10, recipe.drinks[0].strMeasure11, recipe.drinks[0].strMeasure12, recipe.drinks[0].strMeasure13, recipe.drinks[0].strMeasure14, recipe.drinks[0].strMeasure15];
+
+  // Still need to link to Recipe.Html
+  recipeUl.innerHTML = recipe.drinks[0].strDrink
+  var direction = document.createElement('li');
+  direction.innerHTML = recipe.drinks[0].strInstructions
+  recipeUl.appendChild(direction)
+  for (let i = 0; i < ingredients.length; i++) {
+    if (ingredients[i] !== null) {
+      var recipeEl = document.createElement('li');
+      recipeEl.innerHTML = ingredients[i] + " ";
+      recipeUl.appendChild(recipeEl);
+    }
+    if (measure[i] !== null) {
+      var spanEl = document.createElement('span');
+      spanEl.innerHTML = measure[i];
+      recipeEl.appendChild(spanEl);
+    }
   }
-
-
+  glass.src = recipe.drinks[0].strDrinkThumb + "/preview";
+  glassEl.appendChild(glass);
 
 }
-// need to work on the second fetch to see what we get?
-function getStore() {
-  fetch('https://api.yelp.com/v3/categories/' + yelpSearch)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (json) {
 
-      console.log(json);
-
-    })
+function showDrinks() {
+  for (let i = 0; i < drinks.drinks.length; i++) {
+    var drinkEl = document.createElement('li');
+    drinkEl.setAttribute('class', "?");
+    drinkEl.setAttribute('Onclick', 'getRecipe()');
+    drinkEl.setAttribute('value', drinks.drinks[i].strDrink);
+    drinkEl.innerText = drinks.drinks[i].strDrink;
+    lists.appendChild(drinkEl);
+  }
 }
-// will need to make new elements
+
+
+//STILL NEED TO WORK ON YELP !!!!
