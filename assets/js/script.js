@@ -2,8 +2,8 @@
 
 
 // will have to update VAR
-var drink = 'screwdriver'
-var liquor = 'rum'
+var drink = 'screwdriver' //TEMP VAR!!
+var liquor = 'rum'        //TEMP VAR!!
 var yelpSearch = ''
 var recipe = [];
 var drinks = [];
@@ -12,7 +12,7 @@ var glassEl = document.querySelector('#glass')
 var lists = document.querySelector('#list')
 
 // THis is search by liquor give other drinks
-// NO PAT ZONE!!!!!!!!!!!!!!!!!!
+// NO PAT ZONE!!!!!!!!!!!!!!!!!!  ****NOTE**still need to link the 2 other pages*!!
 // PAT Im Serious
 function getdrink() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor)
@@ -37,11 +37,11 @@ for (let i = 0; i < drinkArr.lenght; i++){
 
 Will also need localStocage to paste to past searches
 */
-
-
-
-
 // From liquor we need an array? Then pick the frist one to add to getRecipe!!!
+
+
+
+
 
 // Pat Paggi
 //this is the search for recipe by name of drink
@@ -90,20 +90,10 @@ function showRecipe() {
       recipeEl.appendChild(spanEl);
     }
   }
-
   glass.src = recipe.drinks[0].strDrinkThumb + "/preview";
   glassEl.appendChild(glass);
 
-
-
-  //for (let i = 0; i < recipe.length; i++) {
-
-  //}
-
-
 }
-
-
 
 function showDrinks() {
   for (let i = 0; i < drinks.drinks.length; i++) {
@@ -118,5 +108,3 @@ function showDrinks() {
 
 
 //STILL NEED TO WORK ON YELP !!!!
-getdrink()
-getRecipe()
