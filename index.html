@@ -23,20 +23,32 @@
 
             <input id="liquor" placeholder="Type of liquor?" modifier="underbar" style="width: 300px;">
             </input>
-            <button>Search</button>
+            <button onclick="getRecipe()">Search</button>
         </div>
         <div>
             <ul id="searchHistory">
 
             </ul>
         </div>
-        <div id="img">
-            <iframe src="https://giphy.com/embed/VFZdyyGzwQpbvZ5g91" width="270" height="480" frameBorder="0"
-                class="giphy-disable" allowFullScreen></iframe>
+
+    </div>
+    <!-- THis is for page 2-->
+    <div class="grid">
+        <div class="row">
+            <div class="cell">
+                <ul id="recipe"></ul>
+                <div id='glass'></div>
+            </div>
+            <div class="cell">
+                <ul id="list"></ul>
+            </div>
+            <div class="cell">
+                <input id="searchIngredient"></input>
+                <button></button>
+
+            </div>
         </div>
     </div>
-
-
 
     <script src="assets\js\script.js"></script>
 
