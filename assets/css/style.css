@@ -10,18 +10,15 @@ header {
   background-color: rgba(37, 44, 28, 0.534);
 }
 
-#img {
-  text-align: right;
-  margin-right: 20px;
+.img {
+  height: 350px;
 }
 
-#drinkSearch {
-  padding: 10px;
-  margin-left: 50px;
-}
 
 #drinkSearch input,
 button {
   padding: 10px;
   margin-top: 10px;
+  margin-left: 50px;
+  height: 40px;
 }

@@ -1,44 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <link rel="stylesheet" href="assets\css\style.css" />
     <title>Make Me A Drink!</title>
 </head>
 
 <body>
-    <header style="height: auto;">
-        <h1 class="center">Make Me A Drink!</h1>
+    <!-- header text links to home page -->
+    <header>
+        <ul>
+            <!-- This only so I can test -->
+            <il> <a href="html/recipe.html">Recipe</a> </il>
+            <il> <a href="html/yelp.html">Directions</a></il>
+        </ul>
+        <h1 href="#">Make Me A Drink!</h1>
+
+
     </header>
-    <div class="row">
 
-        <!-- Need to use col,row -->
-        <div id="drinkSearch">
-            <input id="drink" placeholder="Name of the drink?" modifier="underbar" style="width: 300px;"></input>
-            <button>Search</button></br>
 
-            <input id="liquor" placeholder="Type of liquor?" modifier="underbar" style="width: 300px;">
-            </input>
-            <button>Search</button>
+    <div>
+        <h5>Click Your Desired Liquor Below</h5>
+        <div class="grid">
+            <div class="row">
+
+                <!--gin-->
+                <img class="cell 3 pick-drink" data-value="gin" src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg/preview">
+                <!--vodka-->
+                <img class="cell 3 pick-drink" data-value="vodka" src="https://www.thecocktaildb.com/images/media/drink/qyyvtu1468878544.jpg/preview">
+                <!--whiskey-->
+                <img class="cell 3 pick-drink" data-value="whiskey" src="https://www.thecocktaildb.com/images/media/drink/dms3io1504366318.jpg/preview">
+                <!--bourbon-->
+                <img class="cell 3 pick-drink" data-value="bourbon" src="https://www.thecocktaildb.com/images/media/drink/jwmr1x1504372337.jpg/preview">
+            </div>
+
+            <div class="row">
+                <!--rum-->
+                <img class="cell 3 pick-drink" data-value="rum" src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg/preview">
+                <!--tequila-->
+                <img class="cell 3 pick-drink" data-value="tequila" src="https://www.thecocktaildb.com/images/media/drink/of1rj41504348346.jpg/preview">
+                <!--beer-->
+                <img class="cell 3 pick-drink" data-value="beer" src="https://www.thecocktaildb.com/images/media/drink/qywpvt1454512546.jpg/preview">
+                <!--wine-->
+                <img class="cell 3 pick-drink" data-value="wine" src="https://www.thecocktaildb.com/images/media/drink/4g6xds1582579703.jpg/preview">
+            </div>
         </div>
-        <div>
-            <ul id="searchHistory">
 
-            </ul>
+        <div id="list">
+
         </div>
-        <div id="img">
-            <iframe src="https://giphy.com/embed/VFZdyyGzwQpbvZ5g91" width="270" height="480" frameBorder="0"
-                class="giphy-disable" allowFullScreen></iframe>
-        </div>
-    </div>
 
-
-
-    <script src="assets\js\script.js"></script>
+  
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script> 
+        <script src="assets\js\script.js"></script>
 
 </body>
 
