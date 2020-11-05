@@ -10,6 +10,8 @@ var drinks = [];
 var glass = document.createElement('img');
 var glassEl = document.querySelector('#glass')
 var lists = document.querySelector('#list')
+
+
 //var history = JSON.parse(localStorage.getItem('history')) || [];
 
 // THis is search by liquor give other drinks
@@ -26,12 +28,24 @@ $(".pick-drink").click(function(){
 function getdrink(liquor) {
   var apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + liquor;
   fetch(apiUrl).then(function (response) {
+
+var searchInput = document.querySelector('#drinkSearch');
+//var history = JSON.parse(localStorage.getItem('history')) || [];
+// THis is search by liquor give other drinks
+// NO PAT ZONE!!!!!!!!!!!!!!!!!!  ****NOTE**still need to link the 2 other pages*!!
+// PAT Im Serious
+function getdrink() {
+  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor)
+    .then(function (response) {
+
       return response.json();
     })
     .then(function (json) {
       drinks = json
       console.log(json);
+
       showDrinks(drinks)
+
     })
 }
 // End of the No Pat Zone
@@ -49,6 +63,7 @@ for (let i = 0; i < drinkArr.lenght; i++){
 Will also need localStocage to paste to past searches
 */
 // From liquor we need an array? Then pick the frist one to add to getRecipe!!!
+
 
 
 
@@ -102,10 +117,14 @@ function showRecipe() {
 
 }
 
+
 function showDrinks(drinks) {
   //clear out the area and then append the new drinks
   lists.innerHTML="";
   console.log(drinks)
+
+function showDrinks() {
+
   for (let i = 0; i < drinks.drinks.length; i++) {
     var drinkEl = document.createElement('li');
     drinkEl.setAttribute('class', "?");
@@ -117,4 +136,4 @@ function showDrinks(drinks) {
 }
 
 
-//STILL NEED TO WORK ON YELP !!!!
+
