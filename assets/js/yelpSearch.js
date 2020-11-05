@@ -1,6 +1,18 @@
 "use strict";
 
 
+//PAT FREE ZONE 2
+
+
+If(IKnowWhatIAmDoing)
+{
+  alert = "I MEAN It TOO!"
+}
+elseif(IAmConfusedAsHeck)
+{
+  alert = "HEEELLP!"
+}
+
 
 
 
