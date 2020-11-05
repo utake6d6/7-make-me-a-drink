@@ -22,7 +22,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Sollicitudin tempor id eu nisl. Egestas sed sed risus pretium quam vulputate dignissim
             suspendisse in.</p>
-        <div class="grid">
+        <div id="grid" class="grid">
             <div class="row">
                 <!--gin-->
 
@@ -48,8 +48,6 @@
                     src="https://www.thecocktaildb.com/images/ingredients/beer-medium.png">
                 <!--wine-->
                 <img class="cell pick-drink" id="pick-drink" data-value="wine" onclick="img('wine')"
-
-                
                     src="https://www.thecocktaildb.com/images/ingredients/wine-medium.png">
             </div>
 
@@ -67,7 +65,7 @@
                     <div class="cell">
                         <input id="liquor" placeholder="Type of liquor" modifier="underbar"
                             style="width: 300px;"></input>
-                        <button onclick="findLiquor('#liquor')">Drinks</button>
+                        <button onclick="findLiquor()">Drinks</button>
 
                         <ul id="list"></ul>
                     </div>
