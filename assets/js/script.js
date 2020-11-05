@@ -10,6 +10,7 @@ var drinks = [];
 var glass = document.createElement('img');
 var glassEl = document.querySelector('#glass')
 var lists = document.querySelector('#list')
+var searchInput = document.querySelector('#drinkSearch');
 //var history = JSON.parse(localStorage.getItem('history')) || [];
 // THis is search by liquor give other drinks
 // NO PAT ZONE!!!!!!!!!!!!!!!!!!  ****NOTE**still need to link the 2 other pages*!!
@@ -39,6 +40,7 @@ Will also need localStocage to paste to past searches
 */
 // From liquor we need an array? Then pick the frist one to add to getRecipe!!!
 
+getdrink()
 
 
 
