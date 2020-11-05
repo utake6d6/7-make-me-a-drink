@@ -96,9 +96,9 @@ function showDrinks(drinks) {
 }
 
 
-function findLiquor(liquorEl) {
+function findLiquor() {
   liquor = liquorEl.value;
-  debugger
+
   getdrink()
 }
 
