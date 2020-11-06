@@ -4,21 +4,59 @@
   box-sizing: border-box;
 }
 
-
 header {
   text-align: center;
   background-color: rgba(37, 44, 28, 0.534);
+}
+
+.title {
+  color: #cccccc;
+  font-family: "Milonga", cursive;
+  padding-top: 2%;
+}
+
+h1,
+p {
+  color: #cccccc;
+  font-family: "Milonga", cursive;
+  padding-left: 15px;
+}
+
+h5 {
+  color: #cccccc;
+  font-family: "Milonga", cursive;
+  text-align: center;
+}
+
+h2,
+.recipeList,
+.cell,
+.drinkPic {
+  color: #cccccc;
+  font-family: "Milonga", cursive;
+  padding-left: 65px;
+}
+
+.liquorSearch {
+  height: 50px;
+  width: 280px;
+  border-radius: 12px;
+  padding-left: 15px;
+}
+
+.searchBtn {
+  height: 50px;
+  width: 140px;
+  background-color: rgb(250, 219, 161);
+  border-radius: 12px;
 }
 
 .img {
   height: 350px;
 }
 
-
-#drinkSearch input,
-button {
-  padding: 10px;
-  margin-top: 10px;
-  margin-left: 50px;
-  height: 40px;
+body {
+  background-image: url("https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-color: #090233;
+  background-size: cover;
 }
