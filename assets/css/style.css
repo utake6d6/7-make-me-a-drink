@@ -28,13 +28,22 @@ h5 {
   text-align: center;
 }
 
-h2,
-.recipeList,
 .cell,
 .drinkPic {
   color: #cccccc;
   font-family: "Milonga", cursive;
   padding-left: 65px;
+}
+
+h2,
+.recipeList {
+  color: #cccccc;
+  font-family: "Milonga", cursive;
+  padding-left: 20px;
+}
+
+li {
+  font-size: larger;
 }
 
 .liquorSearch {
