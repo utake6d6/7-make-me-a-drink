@@ -13,6 +13,7 @@ var glassEl = document.querySelector('#glass');
 var lists = document.querySelector('#list');
 var drinkEl = document.querySelector('#drink')
 var liquorEl = document.querySelector('#liquor')
+var grid = document.querySelector('.grid')
 //var history = JSON.parse(localStorage.getItem('history')) || [];
 
 var searchInput = document.querySelector('#drinkSearch');
@@ -96,9 +97,9 @@ function showDrinks(drinks) {
 }
 
 
-function findLiquor(liquorEl) {
+function findLiquor() {
   liquor = liquorEl.value;
-  debugger
+
   getdrink()
 }
 
@@ -111,6 +112,8 @@ function findDrink(drinkEl) {
 var pickDrink = document.querySelector('#pick-drink')
 // Click on img to show the list of drinks
 function img(pickDrink) {
+  grid.style.display = "none"
+  liquorEl.value = pickDrink
   // alert($(this).attr("data-value"))
   liquor = pickDrink;
   debugger
