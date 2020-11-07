@@ -140,14 +140,15 @@ function getFacts() {
 }
 getFacts();
 
-var createFactList = function () {
-  var factItem = document.createElement('li');
+function createFactList() {
+
   for (var i = 0; i < factData.results.length; i++) {
-    factItem.setAttribute('class', "list-group-item factItem")
+    var factItem = document.createElement('li');
+    factItem.setAttribute('class', "list-group-item")
     // factItem.setAttribute('Onclick', 'getFact(this)')
     // factItem.setAttribute('href', factData.results[i].link);
-    factItem.text = factData.results[i].title;
-    console.log("FactItem", typeof factItem, factItem)
+    factItem.innerText = factData.results[i].title;
+
     factList.appendChild(factItem);
   }
 }
