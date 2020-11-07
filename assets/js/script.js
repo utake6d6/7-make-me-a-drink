@@ -4,18 +4,16 @@
 // will have to update VAR
 var drink = 'screwdriver' //TEMP VAR!!
 var liquor = 'rum'        //TEMP VAR!!
-var searchIngredientEl = document.querySelector('#searchIngredient');
-var yelpSearch = '';
 var recipe = [];
 var drinks = [];
 var glass = document.createElement('img');
 var glassEl = document.querySelector('#glass');
 var lists = document.querySelector('#list');
-var drinkEl = document.querySelector('#drink')
+// var drinkEl = document.querySelector('#drink')
 var liquorEl = document.querySelector('#liquor')
 var grid = document.querySelector('.grid')
+funFactsEl = document.querySelector('#factLinks')
 //var history = JSON.parse(localStorage.getItem('history')) || [];
-
 var searchInput = document.querySelector('#drinkSearch');
 //var history = JSON.parse(localStorage.getItem('history')) || [];
 
@@ -116,6 +114,41 @@ function img(pickDrink) {
   liquorEl.value = pickDrink
   // alert($(this).attr("data-value"))
   liquor = pickDrink;
-  debugger
   getdrink()
 }
+
+
+
+fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "Fun facts about" + liquor + "=10", {
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
+    "x-rapidapi-host": "google-search3.p.rapidapi.com"
+  }
+})
+  .then((response) => {
+    return response.json();
+  })
+  .then((jsonData) => {
+    console.log(jsonData);
+    console.log("jsonData:", jsonData)
+
+      .catch(err => {
+        console.error(err);
+      });
+
+    console.log("JSONdata:", jsonData);
+
+
+
+    var funFactsEl = document.querySelector('#funFacts');
+
+    function createFactsList() {
+      for (var i = 0; i < factData.results.length; i = i++) {
+        var funFactItem = document.createElement('li');
+        funFactItem.textContent(factData.results[i].name)
+        funFactItem.attributes("href", factData.results.index)
+        funFactsEl.addend(funFactItem);
+      }
+    }
+    createFactsList();
