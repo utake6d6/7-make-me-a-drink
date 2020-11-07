@@ -19,9 +19,7 @@ var grid = document.querySelector('.grid')
 var searchInput = document.querySelector('#drinkSearch');
 //var history = JSON.parse(localStorage.getItem('history')) || [];
 
-// NO PAT ZONE!!!!!!!!!!!!!!!!!!
-// PAT Im Serious
-// THis is search by liquor give other drinks
+
 function getdrink() {
 
   fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor)
@@ -37,7 +35,7 @@ function getdrink() {
 
     })
 }
-// End of the No Pat Zone
+
 
 
 // Pat Paggi
