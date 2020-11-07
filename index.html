@@ -57,28 +57,34 @@
     </div>
     <!-- drink search form by drink name and by liquor-->
 
-
-    <div class="row flex-justify-center">
-        <div class="cell-3">
-            <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
-                style="width: 300px;"></input>
-            <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Drinks</strong></button>
-            <ul class="recipeList" id="list"></ul>
-        </div>
-        <div class="cell-3">
-            <h2><strong>Recipe</strong></h2>
-            <ul id="recipe"></ul>
-            <div class="drinkPic" id='glass'></div>
-        </div>
-        <div class="cell-3">
-            <h2></h2>
-            <p> This is placeholder text for CSS purposes</p>
+    <div class="grid api-grid">
+        <div class="row flex-justify-between">
+            <div class="cell-3">
+                <h2><strong>Type of Drinks</strong></h2>
+                <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
+                    style="width: 300px;"></input>
+                <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Search</strong></button>
+                <ul class="recipeList" id="list"></ul>
+            </div>
+            <div class="cell-3">
+                <h2><strong>Drink Recipe</strong></h2>
+                <ul id="recipe"></ul>
+                <div class="drinkPic" id='glass'></div>
+            </div>
+            <div class="cell-3">
+                <h2><strong>Fun Facts</strong></h2>
+            </div>
         </div>
     </div>
+    <!-- <div class="gcse-search"></div> -->
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <script src="assets\js\script.js"></script>
+
 
 
 </body>

@@ -4,18 +4,17 @@
 // will have to update VAR
 var drink = 'screwdriver' //TEMP VAR!!
 var liquor = 'rum'        //TEMP VAR!!
-var searchIngredientEl = document.querySelector('#searchIngredient');
-var yelpSearch = '';
 var recipe = [];
 var drinks = [];
 var glass = document.createElement('img');
 var glassEl = document.querySelector('#glass');
 var lists = document.querySelector('#list');
-var drinkEl = document.querySelector('#drink')
+// var drinkEl = document.querySelector('#drink')
 var liquorEl = document.querySelector('#liquor')
 var grid = document.querySelector('.grid')
+var factData = [];
+var factList = document.querySelector('#factList')
 //var history = JSON.parse(localStorage.getItem('history')) || [];
-
 var searchInput = document.querySelector('#drinkSearch');
 //var history = JSON.parse(localStorage.getItem('history')) || [];
 
@@ -32,6 +31,7 @@ function getdrink() {
       console.log(json);
 
       showDrinks()
+
 
     })
 }
@@ -100,8 +100,8 @@ function showDrinks() {
 function findLiquor() {
   liquor = liquorEl.value;
   getdrink()
-}
 
+}
 
 function findDrink(drinkEl) {
   drink = drinkEl.innerText;
@@ -115,6 +115,41 @@ function img(pickDrink) {
   liquorEl.innerText = pickDrink
   // alert($(this).attr("data-value"))
   liquor = pickDrink;
-
   getdrink()
 }
+
+function getFacts() {
+  fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=11", {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
+      "x-rapidapi-host": "google-search3.p.rapidapi.com"
+    }
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((jsonData) => {
+      console.log(jsonData);
+      factData = jsonData
+
+      console.log("Fact Data", factData);
+    })
+    .then(createFactList)
+
+}
+getFacts();
+
+function createFactList() {
+
+  for (var i = 0; i < factData.results.length; i++) {
+    var factItem = document.createElement('li');
+    factItem.setAttribute('class', "list-group-item")
+    // factItem.setAttribute('Onclick', 'getFact(this)')
+    // factItem.setAttribute('href', factData.results[i].link);
+    factItem.innerText = factData.results[i].title;
+
+    factList.appendChild(factItem);
+  }
+}
+

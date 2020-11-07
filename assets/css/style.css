@@ -30,11 +30,15 @@ p {
   padding-bottom: 15px;
 }
 
-
 .pick-drink {
   padding-top: 2%;
   max-width: 15%;
   max-height: 15%;
+}
+
+.api-grid {
+  padding-left: 5%;
+  padding-top: 2%;
 }
 
 h2,
@@ -45,7 +49,13 @@ h2,
 }
 
 li {
-  font-size: larger;
+  font-size: large;
+  color: #E9E6E1;
+}
+
+ul {
+  font-size: x-large;
+  color: #E9E6E1;
 }
 
 .liquorSearch {
