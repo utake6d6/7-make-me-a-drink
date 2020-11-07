@@ -12,7 +12,8 @@ var lists = document.querySelector('#list');
 // var drinkEl = document.querySelector('#drink')
 var liquorEl = document.querySelector('#liquor')
 var grid = document.querySelector('.grid')
-funFactsEl = document.querySelector('#factLinks')
+var factData = [];
+var factList = document.querySelector('#factList')
 //var history = JSON.parse(localStorage.getItem('history')) || [];
 var searchInput = document.querySelector('#drinkSearch');
 //var history = JSON.parse(localStorage.getItem('history')) || [];
@@ -32,6 +33,7 @@ function getdrink() {
       console.log(json);
 
       showDrinks(drinks)
+
 
     })
 }
@@ -97,10 +99,9 @@ function showDrinks(drinks) {
 
 function findLiquor() {
   liquor = liquorEl.value;
-
   getdrink()
-}
 
+}
 
 function findDrink(drinkEl) {
   drink = drinkEl.innerText;
@@ -117,38 +118,37 @@ function img(pickDrink) {
   getdrink()
 }
 
-
-
-fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "Fun facts about" + liquor + "=10", {
-  "method": "GET",
-  "headers": {
-    "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
-    "x-rapidapi-host": "google-search3.p.rapidapi.com"
-  }
-})
-  .then((response) => {
-    return response.json();
-  })
-  .then((jsonData) => {
-    console.log(jsonData);
-    console.log("jsonData:", jsonData)
-
-      .catch(err => {
-        console.error(err);
-      });
-
-    console.log("JSONdata:", jsonData);
-
-
-
-    var funFactsEl = document.querySelector('#funFacts');
-
-    function createFactsList() {
-      for (var i = 0; i < factData.results.length; i = i++) {
-        var funFactItem = document.createElement('li');
-        funFactItem.textContent(factData.results[i].name)
-        funFactItem.attributes("href", factData.results.index)
-        funFactsEl.addend(funFactItem);
-      }
+function getFacts() {
+  fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=11", {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
+      "x-rapidapi-host": "google-search3.p.rapidapi.com"
     }
-    createFactsList();
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((jsonData) => {
+      console.log(jsonData);
+      factData = jsonData
+
+      console.log("Fact Data", factData);
+    })
+    .then(createFactList)
+
+}
+getFacts();
+
+var createFactList = function () {
+  var factItem = document.createElement('li');
+  for (var i = 0; i < factData.results.length; i++) {
+    factItem.setAttribute('class', "list-group-item factItem")
+    // factItem.setAttribute('Onclick', 'getFact(this)')
+    // factItem.setAttribute('href', factData.results[i].link);
+    factItem.text = factData.results[i].title;
+    console.log("FactItem", typeof factItem, factItem)
+    factList.appendChild(factItem);
+  }
+}
+
