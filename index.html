@@ -18,11 +18,10 @@
 
     <div>
 
-        <h5><strong>Click Your Desired Liquor Below</strong></h5>
-        <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore
-            magna aliqua. Sollicitudin tempor id eu nisl. Egestas sed sed risus pretium quam vulputate dignissim
-            suspendisse in.</p>
+        <h5><strong>Click Your Desired Liquor Below </strong></h5>
+        <p>Mix up your favorite drink or discover something new by clicking on
+            your preferred liquor below. We'll then show you a series of drink recipes you can make with your choosen
+            alcohol. Then get the party started with a fun trivia game!</p>
 
         <div class="grid alcohol-grid">
             <div class="row flex-justify-center">
@@ -59,29 +58,27 @@
     <!-- drink search form by drink name and by liquor-->
 
 
-    <div class="row">
-        <div class="cell">
+    <div class="row flex-justify-center">
+        <div class="cell-3">
+            <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
+                style="width: 300px;"></input>
+            <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Drinks</strong></button>
+            <ul class="recipeList" id="list"></ul>
+        </div>
+        <div class="cell-3">
             <h2><strong>Recipe</strong></h2>
             <ul id="recipe"></ul>
             <div class="drinkPic" id='glass'></div>
         </div>
-        <div class="cell">
-            <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
-                style="width: 300px;"></input>
-            <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Drinks</strong></button>
-
-            <ul class="recipeList" id="list"></ul>
+        <div class="cell-3">
+            <h2></h2>
+            <p> This is placeholder text for CSS purposes</p>
         </div>
-        <div class="cell">
+    </div>
 
-
-
-
-
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-            <script src="assets\js\script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="assets\js\script.js"></script>
 
 
 </body>

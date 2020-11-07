@@ -6,11 +6,10 @@
 
 header {
   text-align: center;
-  background-color: rgba(37, 44, 28, 0.534);
 }
 
 h1 {
-  color: #cccccc;
+  color: #E9E6E1;
   font-family: "Milonga", cursive;
   text-align: center;
   margin: 0 150px 0 150px;
@@ -19,7 +18,7 @@ h1 {
 }
 
 h5 {
-  color: #cccccc;
+  color: #E9E6E1;
   font-family: "Milonga", cursive;
   text-align: center;
 }
@@ -27,7 +26,7 @@ h5 {
 p {
   margin: 0 180px 0 180px;
   text-align: center;
-  color: #cccccc;
+  color: #E9E6E1;
   padding-bottom: 15px;
 }
 
@@ -40,7 +39,7 @@ p {
 
 h2,
 .recipeList {
-  color: #cccccc;
+  color: #E9E6E1;
   font-family: "Milonga", cursive;
   padding-left: 20px;
 }
