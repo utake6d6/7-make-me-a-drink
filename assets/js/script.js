@@ -32,7 +32,7 @@ function getdrink() {
       drinks = json
       console.log(json);
 
-      showDrinks(drinks)
+      showDrinks()
 
 
     })
@@ -83,10 +83,12 @@ function showRecipe() {
 }
 
 
-function showDrinks(drinks) {
+function showDrinks() {
   //clear out the area and then append the new drinks
   lists.innerHTML = "";
+  debugger
   for (let i = 0; i < drinks.drinks.length; i++) {
+    debugger
     var drinkEl = document.createElement('li');
     drinkEl.setAttribute('class', "drinks");
     drinkEl.setAttribute('Onclick', 'findDrink(this)');
@@ -112,7 +114,7 @@ var pickDrink = document.querySelector('#pick-drink')
 // Click on img to show the list of drinks
 function img(pickDrink) {
   grid.style.display = "none"
-  liquorEl.value = pickDrink
+  liquorEl.innerText = pickDrink
   // alert($(this).attr("data-value"))
   liquor = pickDrink;
   getdrink()
