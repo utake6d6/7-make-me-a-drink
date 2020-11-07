@@ -6,11 +6,10 @@
 
 header {
   text-align: center;
-  background-color: rgba(37, 44, 28, 0.534);
 }
 
 h1 {
-  color: #cccccc;
+  color: #E9E6E1;
   font-family: "Milonga", cursive;
   text-align: center;
   margin: 0 150px 0 150px;
@@ -19,7 +18,7 @@ h1 {
 }
 
 h5 {
-  color: #cccccc;
+  color: #E9E6E1;
   font-family: "Milonga", cursive;
   text-align: center;
 }
@@ -27,10 +26,9 @@ h5 {
 p {
   margin: 0 180px 0 180px;
   text-align: center;
-  color: #cccccc;
+  color: #E9E6E1;
   padding-bottom: 15px;
 }
-
 
 .pick-drink {
   padding-top: 2%;
@@ -38,15 +36,34 @@ p {
   max-height: 15%;
 }
 
+.api-grid {
+  padding-left: 5%;
+  padding-top: 2%;
+  padding-right: 5%;
+}
+
 h2,
 .recipeList {
-  color: #cccccc;
+  color: #E9E6E1;
   font-family: "Milonga", cursive;
   padding-left: 20px;
 }
 
+.rounded {
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+}
+
 li {
-  font-size: larger;
+  font-size: large;
+  color: #E9E6E1;
+}
+
+ul {
+  font-size: x-large;
+  color: #E9E6E1;
 }
 
 .liquorSearch {
@@ -67,4 +84,15 @@ body {
   background-image: url("https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-color: #090233;
   background-size: cover;
+}
+
+footer {
+  background-color: black;
+  color: #E9E6E1;
+  width: 100%;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 35px;
 }
