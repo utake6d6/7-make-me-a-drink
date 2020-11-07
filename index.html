@@ -20,10 +20,11 @@
 
     <div>
         <h5><strong>Click Your Desired Liquor Below</strong></h5>
-        <p class = "p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore
             magna aliqua. Sollicitudin tempor id eu nisl. Egestas sed sed risus pretium quam vulputate dignissim
             suspendisse in.</p>
-        <b class="grid">
+        <div id="grid" class="grid">
             <div class="row">
                 <!--gin-->
 
@@ -52,53 +53,38 @@
                     src="https://www.thecocktaildb.com/images/ingredients/wine-medium.png">
             </div>
 
-            <br/><br/>
-
-            <!-- drink search form by drink name and by liquor-->
-            <div class="grid">
-                <div class="row">
-                    <div class="cell">
-                        <h2><strong>Recipe</strong></h2>
-                        <ul id="recipe"></ul>
-                        <div class= "drinkPic" id='glass'></div>
-                    </div>
-                    <div class="cell">
-                        <input class= "liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
-                            style="width: 300px;"></input>
-                        <button class= "searchBtn" onclick="findLiquor('#liquor')"><strong>Drinks</strong></button>
-
-                        <ul class= "recipeList" id="list"></ul>
-                    </div>
-                    <div class="cell">
-
+            <br /><br />
         </div>
+    </div>
+    <!-- drink search form by drink name and by liquor-->
 
-        <!-- drink search form by drink name and by liquor-->
-        <div class="grid">
-            <div class="row">
-                <div class="cell">
-                    <h2>Recipe</h2>
-                    <ul id="recipe"></ul>
-                    <div id='glass'></div>
-                </div>
-                <div class="cell">
-                    <input id="liquor" placeholder="Type of liquor" modifier="underbar" style="width: 300px;"></input>
-                    <button onclick="findLiquor()">Drinks</button>
+    <div class="grid">
+        <div class="row">
+            <div class="cell">
+                <h2><strong>Recipe</strong></h2>
+                <ul id="recipe"></ul>
+                <div class="drinkPic" id='glass'></div>
+            </div>
+            <div class="cell">
+                <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
+                    style="width: 300px;"></input>
+                <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Drinks</strong></button>
 
-                    <ul id="list"></ul>
-                </div>
-                <div class="cell">
+                <ul class="recipeList" id="list"></ul>
+            </div>
+            <div class="cell">
 
-                </div>
             </div>
         </div>
+    </div>
 
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-        <script src="assets\js\script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="assets\js\script.js"></script>
 
 
 
