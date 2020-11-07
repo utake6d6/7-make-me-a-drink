@@ -84,9 +84,9 @@ function showRecipe() {
 function showDrinks() {
   //clear out the area and then append the new drinks
   lists.innerHTML = "";
-  debugger
+
   for (let i = 0; i < drinks.drinks.length; i++) {
-    debugger
+
     var drinkEl = document.createElement('li');
     drinkEl.setAttribute('class', "drinks");
     drinkEl.setAttribute('Onclick', 'findDrink(this)');
@@ -112,14 +112,16 @@ var pickDrink = document.querySelector('#pick-drink')
 // Click on img to show the list of drinks
 function img(pickDrink) {
   grid.style.display = "none"
+
   liquorEl.innerText = pickDrink
   // alert($(this).attr("data-value"))
   liquor = pickDrink;
   getdrink()
+  getFacts()
 }
 
 function getFacts() {
-  fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=11", {
+  fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=6", {
     "method": "GET",
     "headers": {
       "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
@@ -138,15 +140,14 @@ function getFacts() {
     .then(createFactList)
 
 }
-getFacts();
+// getFacts();
 
 function createFactList() {
-
-  for (var i = 0; i < factData.results.length; i++) {
-    var factItem = document.createElement('li');
+  for (var i = 0; i < 6; i++) {
+    var factItem = document.createElement('a');
     factItem.setAttribute('class', "list-group-item")
-    // factItem.setAttribute('Onclick', 'getFact(this)')
-    // factItem.setAttribute('href', factData.results[i].link);
+    factItem.setAttribute('Onclick', 'openLink(this)')
+    factItem.setAttribute('href', factData.results[i].link);
     factItem.innerText = factData.results[i].title;
 
     factList.appendChild(factItem);
