@@ -33,16 +33,9 @@ p {
 
 .pick-drink {
   padding-top: 2%;
-  max-width: 10%;
+  max-width: 15%;
   max-height: 30%;
 }
-
-
-/* .cell {
-  color: #cccccc;
-  font-family: "Milonga", cursive;
-} */
-
 
 h2,
 .recipeList {
