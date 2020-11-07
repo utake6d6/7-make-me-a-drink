@@ -9,17 +9,13 @@ header {
   background-color: rgba(37, 44, 28, 0.534);
 }
 
-.title {
+h1 {
   color: #cccccc;
   font-family: "Milonga", cursive;
+  text-align: center;
+  margin: 0 150px 0 150px;
   padding-top: 2%;
-}
-
-h1,
-p {
-  color: #cccccc;
-  font-family: "Milonga", cursive;
-  padding-left: 15px;
+  padding-bottom: 10px;
 }
 
 h5 {
@@ -28,12 +24,25 @@ h5 {
   text-align: center;
 }
 
-.cell,
-.drinkPic {
+p {
+  margin: 0 180px 0 180px;
+  text-align: center;
+  color: #cccccc;
+  padding-bottom: 15px;
+}
+
+.pick-drink {
+  padding-top: 2%;
+  max-width: 10%;
+  max-height: 30%;
+}
+
+
+/* .cell {
   color: #cccccc;
   font-family: "Milonga", cursive;
-  padding-left: 65px;
-}
+} */
+
 
 h2,
 .recipeList {
@@ -58,10 +67,6 @@ li {
   width: 140px;
   background-color: rgb(250, 219, 161);
   border-radius: 12px;
-}
-
-.img {
-  height: 350px;
 }
 
 body {
