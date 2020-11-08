@@ -20,25 +20,33 @@ var searchInput = document.querySelector('#drinkSearch');
 
 
 function getdrink() {
-
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor)
-    .then(function (response) {
-
-      return response.json();
+  Promise.all([
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor),
+    fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=6", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
+        "x-rapidapi-host": "google-search3.p.rapidapi.com"
+      }
+    })
+  ])
+    .then(function (responses) {
+      return Promise.all(responses.map(function (response) {
+        return response.json();
+      }));
     })
     .then(function (json) {
       drinks = json
-      console.log(json);
+      console.log(drinks);
 
       showDrinks()
-
+      createFactList()
 
     })
 }
 
 
 
-// Pat Paggi
 //this is the search for recipe by name of drink
 function getRecipe() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drink)
@@ -85,13 +93,13 @@ function showDrinks() {
   //clear out the area and then append the new drinks
   lists.innerHTML = "";
 
-  for (let i = 0; i < drinks.drinks.length; i++) {
+  for (let i = 0; i < drinks[0].drinks.length; i++) {
 
     var drinkEl = document.createElement('li');
     drinkEl.setAttribute('class', "drinks");
     drinkEl.setAttribute('Onclick', 'findDrink(this)');
-    drinkEl.setAttribute('value', drinks.drinks[i].strDrink);
-    drinkEl.innerText = drinks.drinks[i].strDrink;
+    drinkEl.setAttribute('value', drinks[0].drinks[i].strDrink);
+    drinkEl.innerText = drinks[0].drinks[i].strDrink;
     lists.appendChild(drinkEl);
   }
 }
@@ -114,43 +122,25 @@ function img(pickDrink) {
   grid.style.display = "none"
 
   liquorEl.innerText = pickDrink
-  // alert($(this).attr("data-value"))
+
   liquor = pickDrink;
   getdrink()
-  getFacts()
-}
-
-function getFacts() {
-  fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=6", {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
-      "x-rapidapi-host": "google-search3.p.rapidapi.com"
-    }
-  })
-    .then((response) => {
-      return response.json();
-    })
-    .then((jsonData) => {
-      console.log(jsonData);
-      factData = jsonData
-
-      console.log("Fact Data", factData);
-    })
-    .then(createFactList)
 
 }
-// getFacts();
+
+
 
 function createFactList() {
   for (var i = 0; i < 6; i++) {
+    var factEl = document.createElement('li');
     var factItem = document.createElement('a');
     factItem.setAttribute('class', "list-group-item")
     factItem.setAttribute('Onclick', 'openLink(this)')
-    factItem.setAttribute('href', factData.results[i].link);
-    factItem.innerText = factData.results[i].title;
+    factItem.setAttribute('href', drinks[1].results[i].link);
+    factItem.innerText = drinks[1].results[i].title;
 
-    factList.appendChild(factItem);
+    factList.appendChild(factEl);
+    factEl.appendChild(factItem);
   }
 }
 
