@@ -120,10 +120,9 @@ var pickDrink = document.querySelector('#pick-drink')
 // Click on img to show the list of drinks
 function img(pickDrink) {
   grid.style.display = "none"
-
-  liquorEl.innerText = pickDrink
-
   liquor = pickDrink;
+  liquorEl.value = liquor;
+
   getdrink()
 
 }
