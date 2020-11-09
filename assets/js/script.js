@@ -21,14 +21,14 @@ var search = JSON.parse(localStorage.getItem('search')) || [];
 
 function getdrink() {
   Promise.all([
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor)
-    /*fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=6", {
-       "method": "GET",
-       "headers": {
-         "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
-         "x-rapidapi-host": "google-search3.p.rapidapi.com"
-       }
-     })*/
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + liquor),
+    fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=6", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
+        "x-rapidapi-host": "google-search3.p.rapidapi.com"
+      }
+    })
   ])
     .then(function (responses) {
       return Promise.all(responses.map(function (response) {
@@ -40,7 +40,7 @@ function getdrink() {
       console.log(drinks);
 
       showDrinks()
-      // createFactList()
+      createFactList()
 
     })
 }
