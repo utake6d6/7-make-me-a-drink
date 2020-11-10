@@ -42,10 +42,14 @@ p {
   padding-right: 5%;
 }
 
-h2,
-.recipeList {
+h2 {
   color: #e9e6e1;
   font-family: "Milonga", cursive;
+  padding-left: 20px;
+}
+
+.recipeList {
+  color: #e9e6e1;
   padding-left: 20px;
 }
 
