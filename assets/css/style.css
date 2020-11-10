@@ -128,3 +128,9 @@ footer {
   flex-wrap: wrap;
   margin-top: 35px;
 }
+
+.bottom-centered {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
