@@ -66,20 +66,26 @@
     <div class="grid api-grid">
         <div class="row flex-justify-between">
             <div class="cell-3">
-                <h2><strong>Type of Drinks</strong></h2>
-                <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
-                    style="width: 300px;"></input>
-                <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Search</strong></button>
-                <ul class="recipeList" id="list"></ul>
+                <div class="boxBorder1">
+                    <h2>Type of Drinks</h2>
+                    <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
+                        style="width: 300px;"></input>
+                    <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Search</strong></button>
+                    <ul class="recipeList" id="list"></ul>
+                </div>
             </div>
             <div class="cell-3">
-                <h2><strong>Drink Recipe</strong></h2>
-                <ul id="recipe"></ul>
-                <div class="drinkPic" id='glass'></div>
+                <div class="boxBorder2">
+                    < <h2>Drink Recipe</h2>
+                        <ul id="recipe"></ul>
+                        <div class="drinkPic" id='glass'></div>
+                </div>
             </div>
             <div class="cell-3">
-                <h2><strong>Fun Facts</strong></h2>
-                <ul class="list-group" id="factList"></ul>
+                <div class="boxBorder3">
+                    <h2>Fun Facts</h2>
+                    <ul class="list-group" id="factList"></ul>
+                </div>
             </div>
         </div>
     </div>

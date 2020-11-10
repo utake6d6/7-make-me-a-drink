@@ -58,14 +58,44 @@ h2,
   margin-top: 2%;
 }
 
-li {
+.boxBorder1 {
+  border: 2px solid #eed8a9;
+  padding: 10px;
+  outline: #eed8a9 solid 5px;
+  outline-offset: 5px;
+  background-color: rgb(71, 71, 71);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.unsplash.com/photo-1601053397261-2552332609fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);
+}
+
+.boxBorder2 {
+  border: 2px solid #eed8a9;
+  padding: 10px;
+  outline: #eed8a9 solid 5px;
+  outline-offset: 5px;
+  background-color: rgb(71, 71, 71);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.unsplash.com/photo-1590423859012-39c5ee2845bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+}
+
+.boxBorder3 {
+  border: 2px solid #eed8a9;
+  padding: 10px;
+  outline: #eed8a9 solid 5px;
+  outline-offset: 5px;
+  background-color: rgb(71, 71, 71);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.unsplash.com/photo-1566666152520-27af5f022a0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+}
+
+li a {
   font-size: large;
-  color: #E9E6E1;
+  color: #e9e6e1;
 }
 
 ul {
   font-size: x-large;
-  color: #E9E6E1;
+  color: #e9e6e1;
 }
 
 .liquorSearch {
@@ -90,17 +120,11 @@ body {
 
 footer {
   background-color: black;
-  color: #E9E6E1;
+  color: #e9e6e1;
   width: 100%;
   padding: 20px 35px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 35px;
-}
-
-.bottom-centered {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
 }
