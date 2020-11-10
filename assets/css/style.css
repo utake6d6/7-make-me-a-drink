@@ -34,6 +34,32 @@ p {
   padding-top: 2%;
   max-width: 15%;
   max-height: 15%;
+  transition: all .2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.pick-drink:hover {
+  transform: scale(1.1);
+}
+
+.pick-drink h2 {
+  position: absolute;
+  margin: auto;
+  top: 1;
+  left: 1;
+  right: 1;
+  bottom: 1;
+  display: none;
+  transition: all .5s ease-in-out;
+  padding: .25rem .5rem;
+  border-radius: 3px;
+  color: white;
+}
+
+.pick-drink:hover h2 {
+display: inline-block;
 }
 
 .api-grid {
