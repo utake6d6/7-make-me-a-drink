@@ -3,7 +3,7 @@
 
 // will have to update VAR
 var drink = 'screwdriver' //TEMP VAR!!
-var liquor = 'rum'        //TEMP VAR!!
+var liquor = 'rum' //TEMP VAR!!
 var recipe = [];
 var drinks = [];
 var glass = document.createElement('img');
@@ -120,12 +120,12 @@ function img(pickDrink) {
 
 function getFacts() {
   fetch("https://google-search3.p.rapidapi.com/api/v1/search/q=" + "fun facts about" + liquor + "=11", {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
-      "x-rapidapi-host": "google-search3.p.rapidapi.com"
-    }
-  })
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": "0648fc4c2fmsh626d7d99380e5bap1d3459jsn18d68de57084",
+        "x-rapidapi-host": "google-search3.p.rapidapi.com"
+      }
+    })
     .then((response) => {
       return response.json();
     })
@@ -153,3 +153,18 @@ function createFactList() {
   }
 }
 
+function searchHistory() {
+  recent.innerHTML = "";
+  grid.style.display = "block";
+  recent.style.display = "block";
+  // if (drinks[0].drinks.length !== null){}
+  for (let i = 0; i < search.length; i++) {
+
+    var pastRecipeEl = document.createElement('li');
+    pastRecipeEl.setAttribute('class', "drinks");
+    pastRecipeEl.setAttribute('Onclick', 'findDrink(this)');
+    pastRecipeEl.setAttribute('value', search[i]);
+    pastRecipeEl.innerText = search[i];
+    recent.appendChild(pastRecipeEl);
+  }
+}

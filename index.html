@@ -51,17 +51,18 @@
         </div>
     </div>
     </div>
+    <!-- show past searches button and list -->
+    <div>
+        <button class="searchBtn" id="recentSearches" onclick="searchHistory()">
+            Previously </button>
+        <ul>
+            <li id="pastSearches">
+            </li>
+        </ul>
+    </div>
 
     <hr class="rounded">
-    <!-- show past searches button and list -->
-    <ul style="float: left;">
-        <li>
-            <button class="searchBtn" id="recentSearches" onclick="searchHistory()">
-                Previously </button>
-            <ol id="pastSearches">
-            </ol>
-        </li>
-    </ul>
+
     <!-- drink search form by drink name and by liquor-->
     <div class="grid api-grid">
         <div class="row flex-justify-between">
