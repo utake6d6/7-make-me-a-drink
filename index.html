@@ -32,36 +32,61 @@
         <h5>Click Your Desired Liquor Below</h5>
         <p>Mix up your favorite drink or discover something new by clicking on
             your preferred liquor below. We'll then show you a series of drink recipes you can make with your choosen
-            alcohol. Also, if you are feeling dangerous tonight just click on the Search button and we will give you a list of random drinks. </p>
+            alcohol. Also, if you are feeling dangerous tonight just click on the Search button and we will give you a
+            list of random drinks. </p>
 
         <div class="grid alcohol-grid">
             <div class="row flex-justify-center">
                 <!--gin-->
-                <img class="cell-3 pick-drink" id="pick-drink" data-value="gin" onclick="img('gin')"
-                    src="https://www.thecocktaildb.com/images/ingredients/gin-medium.png">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Gin</h2>
+                    <img id="pick-drink" data-value="gin" onclick="img('gin')"
+                        src="https://www.thecocktaildb.com/images/ingredients/gin-medium.png">
+                </div>
                 <!--vodka-->
-                <img class="cell-3 pick-drink" id="pick-drink" data-value="vodka" onclick="img('vodka')"
-                    src="https://www.thecocktaildb.com/images/ingredients/vodka-medium.png">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Vodka</h2>
+                    <img id="pick-drink" data-value="vodka" onclick="img('vodka')"
+                        src="https://www.thecocktaildb.com/images/ingredients/vodka-medium.png">
+                </div>
                 <!--whiskey-->
-                <img class="cell-3 pick-drink" id="pick-drink" data-value="whiskey" onclick="img('whiskey')"
-                    src="https://www.thecocktaildb.com/images/ingredients/whiskey-medium.png">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Whiskey</h2>
+                    <img id="pick-drink" data-value="whiskey" onclick="img('whiskey')"
+                        src="https://www.thecocktaildb.com/images/ingredients/whiskey-medium.png">
+                </div>
                 <!--bourbon-->
-                <img class="cell-3 pick-drink" id="pick-drink" data-value="bourbon" onclick="img('bourbon')"
-                    src="https://www.thecocktaildb.com/images/ingredients/bourbon-medium.png">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Bourbon</h2>
+                    <img id="pick-drink" data-value="bourbon" onclick="img('bourbon')"
+                        src="https://www.thecocktaildb.com/images/ingredients/bourbon-medium.png">
+                </div>
             </div>
             <div class="row flex-justify-center">
                 <!--rum-->
-                <img class="cell-3 pick-drink" id="pick-drink" data-value="rum" onclick="img('rum')"
-                    src="https://www.thecocktaildb.com/images/ingredients/rum-medium.png">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Rum</h2>
+                    <img id="pick-drink" data-value="rum" onclick="img('rum')"
+                        src="https://www.thecocktaildb.com/images/ingredients/rum-medium.png">
+                </div>
                 <!--tequila-->
-                <img class="cell-3 pick-drink" id="pick-drink" data-value="tequila" onclick="img('tequila')"
-                    src="https://www.thecocktaildb.com/images/ingredients/tequila-medium.png">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Tequila</h2>
+                    <img id="pick-drink" data-value="tequila" onclick="img('tequila')"
+                        src="https://www.thecocktaildb.com/images/ingredients/tequila-medium.png">
+                </div>
                 <!--beer-->
-                <img class="cell-3 pick-drink beer" id="pick-drink" data-value="beer" onclick="img('beer')"
-                    src="https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/256/256/true/eyJpZCI6ImQ0ZjAwNzdiZjJmYjY0MzEyMGUyZDBjMWYxZDNjODRkIiwic3RvcmFnZSI6InB1YmxpY19zdG9yZSJ9?signature=c6d464d75e9b3e0a339b31575b283d20629e07ca70fb31956871ae512c434b4b">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Beer</h2>
+                    <img id="pick-drink" data-value="beer" onclick="img('beer')"
+                        src="https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/256/256/true/eyJpZCI6ImQ0ZjAwNzdiZjJmYjY0MzEyMGUyZDBjMWYxZDNjODRkIiwic3RvcmFnZSI6InB1YmxpY19zdG9yZSJ9?signature=c6d464d75e9b3e0a339b31575b283d20629e07ca70fb31956871ae512c434b4b">
+                </div>
                 <!--wine-->
-                <img class="cell-3 pick-drink" id="pick-drink" data-value="wine" onclick="img('wine')"
-                    src="https://www.thecocktaildb.com/images/ingredients/wine-medium.png">
+                <div class="cell-3 pick-drink">
+                    <h2 class="boxBorder2">Wine</h2>
+                    <img id="pick-drink" data-value="wine" onclick="img('wine')"
+                        src="https://www.thecocktaildb.com/images/ingredients/wine-medium.png">
+                </div>
             </div>
         </div>
     </div>
@@ -72,24 +97,30 @@
         <div class="row flex-justify-between">
             <div class="cell-3">
                 <div class="boxBorder1">
-                <h2>Type of Drinks</h2>
-                <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
-                    style="width: 300px;"></input>
-                <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Search</strong></button>
-                <ul class="recipeList" id="list"></ul>
+
+                    <h2><strong>Type of Drinks</strong></h2>
+                    <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
+                        style="width: 300px;"></input>
+                    <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Search</strong></button>
+                    <ul class="recipeList" id="list"></ul>
+
                 </div>
             </div>
             <div class="cell-3">
                 <div class="boxBorder2">
-                <h2>Drink Recipe</h2>
-                <ul id="recipe"></ul>
-                <div class="drinkPic" id='glass'></div>
+
+                    <h2><strong>Drink Recipe</strong></h2>
+                    <ul id="recipe"></ul>
+                    <div class="drinkPic" id='glass'></div>
+
                 </div>
             </div>
             <div class="cell-3">
                 <div class="boxBorder3">
-                <h2>Fun Facts</h2>
-                <ul class="list-group" id="factList"></ul>
+
+                    <h2><strong>Fun Facts</strong></h2>
+                    <ul class="list-group" id="factList"></ul>
+
                 </div>
             </div>
         </div>
