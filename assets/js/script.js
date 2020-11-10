@@ -14,9 +14,9 @@ var liquorEl = document.querySelector('#liquor')
 var grid = document.querySelector('.grid')
 var factData = [];
 var factList = document.querySelector('#factList')
-//var history = JSON.parse(localStorage.getItem('history')) || [];
+var recent = document.querySelector('#pastSearches')
 var searchInput = document.querySelector('#drinkSearch');
-//var history = JSON.parse(localStorage.getItem('history')) || [];
+var search = JSON.parse(localStorage.getItem('search')) || [];
 
 
 function getdrink() {
@@ -37,7 +37,7 @@ function getdrink() {
     })
     .then(function (json) {
       drinks = json
-      console.log(drinks);
+      // console.log(drinks);
 
       showDrinks()
       createFactList()
@@ -55,15 +55,17 @@ function getRecipe() {
     })
     .then(function (json) {
       recipe = json
-      showRecipe()
-      console.log(recipe);
 
+      showRecipe()
+      // console.log(recipe);
+      //  console.log(search)
     })
 }
 var glassEl = document.querySelector('#glass');
 var recipeUl = document.querySelector('#recipe')
 // THis is the recipe!! done until getDrinks is up
 function showRecipe() {
+  grid.style.display = "none"
   var ingredients = [recipe.drinks[0].strIngredient1, recipe.drinks[0].strIngredient2, recipe.drinks[0].strIngredient3, recipe.drinks[0].strIngredient4, recipe.drinks[0].strIngredient5, recipe.drinks[0].strIngredient6, recipe.drinks[0].strIngredient7, recipe.drinks[0].strIngredient8, recipe.drinks[0].strIngredient9, recipe.drinks[0].strIngredient10, recipe.drinks[0].strIngredient11, recipe.drinks[0].strIngredient12, recipe.drinks[0].strIngredient13, recipe.drinks[0].strIngredient14, recipe.drinks[0].strIngredient15];
   var measure = [recipe.drinks[0].strMeasure1, recipe.drinks[0].strMeasure2, recipe.drinks[0].strMeasure3, recipe.drinks[0].strMeasure4, recipe.drinks[0].strMeasure5, recipe.drinks[0].strMeasure6, recipe.drinks[0].strMeasure7, recipe.drinks[0].strMeasure8, recipe.drinks[0].strMeasure9, recipe.drinks[0].strMeasure10, recipe.drinks[0].strMeasure11, recipe.drinks[0].strMeasure12, recipe.drinks[0].strMeasure13, recipe.drinks[0].strMeasure14, recipe.drinks[0].strMeasure15];
 
@@ -92,7 +94,7 @@ function showRecipe() {
 function showDrinks() {
   //clear out the area and then append the new drinks
   lists.innerHTML = "";
-
+  // if (drinks[0].drinks.length !== null){}
   for (let i = 0; i < drinks[0].drinks.length; i++) {
 
     var drinkEl = document.createElement('li');
@@ -113,7 +115,18 @@ function findLiquor() {
 
 function findDrink(drinkEl) {
   drink = drinkEl.innerText;
-
+  search.unshift(drink)
+  for (let i = search.length - 1; i >= 0; i--) {
+    for (let j = 0; j < i; j++) {
+      if (search[j] === search[i]) {
+        search.splice(i, 1);
+        break;
+      }
+    }
+    recent.style.display = "none";
+  }
+  search.splice(5)
+  localStorage.setItem('search', JSON.stringify(search))
   getRecipe()
 }
 var pickDrink = document.querySelector('#pick-drink')
@@ -130,6 +143,7 @@ function img(pickDrink) {
 
 
 function createFactList() {
+  factList.innerHTML = "";
   for (var i = 0; i < 6; i++) {
     var factEl = document.createElement('li');
     var factItem = document.createElement('a');
@@ -142,4 +156,18 @@ function createFactList() {
     factEl.appendChild(factItem);
   }
 }
+function searchHistory() {
+  recent.innerHTML = "";
+  grid.style.display = "block";
+  recent.style.display = "block";
+  // if (drinks[0].drinks.length !== null){}
+  for (let i = 0; i < search.length; i++) {
 
+    var pastRecipeEl = document.createElement('li');
+    pastRecipeEl.setAttribute('class', "drinks");
+    pastRecipeEl.setAttribute('Onclick', 'findDrink(this)');
+    pastRecipeEl.setAttribute('value', search[i]);
+    pastRecipeEl.innerText = search[i];
+    recent.appendChild(pastRecipeEl);
+  }
+}
