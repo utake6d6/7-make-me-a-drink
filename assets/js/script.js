@@ -37,7 +37,7 @@ function getdrink() {
     })
     .then(function (json) {
       drinks = json
-      console.log(drinks);
+      // console.log(drinks);
 
       showDrinks()
       createFactList()
@@ -57,8 +57,8 @@ function getRecipe() {
       recipe = json
 
       showRecipe()
-      console.log(recipe);
-      console.log(search)
+      // console.log(recipe);
+      //  console.log(search)
     })
 }
 var glassEl = document.querySelector('#glass');
