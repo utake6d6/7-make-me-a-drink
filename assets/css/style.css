@@ -11,11 +11,7 @@ h5 {
   font-family: "Milonga";
 }
 
-a,
-a:link,
-a:hover,
-a:active,
-a:visited {
+.logo {
   font-family: "Milonga";
   display: flex;
   justify-content: space-around;
@@ -23,6 +19,10 @@ a:visited {
   font-size: 45px;
   color: #e9e6e1 !important;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 p {
@@ -42,6 +42,7 @@ p {
   justify-content: center;
   text-align: center;
 }
+
 .pick-drink:hover {
   transform: scale(1.1);
 }
@@ -61,7 +62,7 @@ p {
 }
 
 .pick-drink:hover h2 {
-display: inline-block;
+  display: inline-block;
 }
 
 .api-grid {
@@ -141,6 +142,13 @@ ul {
   width: 140px;
   background-color: rgb(250, 219, 161);
   border-radius: 12px;
+  font-weight: bold;
+}
+
+.pastSearchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
