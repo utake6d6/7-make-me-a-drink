@@ -60,33 +60,33 @@ h2,
 }
 
 .boxBorder1 {
-  border: 2px solid #eed8a9;
-  padding: 10px;
+  border: 1px solid #eed8a9;
+  padding: 20px;
   outline: #eed8a9 solid 5px;
-  outline-offset: 5px;
+  outline-offset: 3px;
+  background-color: rgb(71, 71, 71);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://www.freewebheaders.com/wp-content/gallery/drinks/awesome-liquors-and-beverages-on-bar-shelves-website-header.jpg);
+}
+
+.boxBorder2 {
+  border: 1px solid #eed8a9;
+  padding: 20px;
+  outline: #eed8a9 solid 5px;
+  outline-offset: 3px;
   background-color: rgb(71, 71, 71);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://images.unsplash.com/photo-1601053397261-2552332609fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);
 }
 
-.boxBorder2 {
-  border: 2px solid #eed8a9;
-  padding: 10px;
+.boxBorder3 {
+  border: 1px solid #eed8a9;
+  padding: 20px;
   outline: #eed8a9 solid 5px;
-  outline-offset: 5px;
+  outline-offset: 3px;
   background-color: rgb(71, 71, 71);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://images.unsplash.com/photo-1590423859012-39c5ee2845bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
-}
-
-.boxBorder3 {
-  border: 2px solid #eed8a9;
-  padding: 10px;
-  outline: #eed8a9 solid 5px;
-  outline-offset: 5px;
-  background-color: rgb(71, 71, 71);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://images.unsplash.com/photo-1566666152520-27af5f022a0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
 }
 
 li a {
