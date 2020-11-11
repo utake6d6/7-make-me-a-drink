@@ -13,8 +13,10 @@
 
 <body>
     <header>
+
         <a href="#" class="logo">Make Me A Drink!</a>
-        <h5><strong>Click Your Desired Liquor Below </strong></h5>
+        <h5 id="refresh"><strong>Click Your Desired Liquor Below </strong></h5>
+
         <p>Mix up your favorite drink or discover something new by clicking on
             your preferred liquor below. We'll then show you a series of drink recipes you can make with your chosen
             alcohol. Also, if you are feeling dangerous tonight just click on the Search button and we will give you a
@@ -100,9 +102,11 @@
             <div class="cell-6">
                 <div class="boxBorder2">
                     <h2>Type of Drinks</h2>
+
                     <input class="liquorSearch" id="liquor" placeholder="Search for a different liquor"
                         modifier="underbar" style="width: 300px;"></input>
                     <button class="searchBtn" onclick="findLiquor('#liquor')">Search</button>
+
                     <ul class="recipeList" id="list"></ul>
                 </div>
             </div>
