@@ -77,9 +77,9 @@
     </div>
 
     <!-- show past searches button and list -->
-    <div>
-        <button class="searchBtn" id="recentSearches" onclick="searchHistory()">
-            Past Drink Searches </button>
+    <div class="pastSearchButton"">
+        <button class=" searchBtn" id="recentSearches" onclick="searchHistory()">
+        Past Drink Searches </button>
         <ul>
             <li id="pastSearches">
             </li>
@@ -100,8 +100,8 @@
             <div class="cell-6">
                 <div class="boxBorder2">
                     <h2>Type of Drinks</h2>
-                    <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
-                        style="width: 300px;"></input>
+                    <input class="liquorSearch" id="liquor" placeholder="Search for a different liquor"
+                        modifier="underbar" style="width: 300px;"></input>
                     <button class="searchBtn" onclick="findLiquor('#liquor')">Search</button>
                     <ul class="recipeList" id="list"></ul>
                 </div>
