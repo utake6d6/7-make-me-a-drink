@@ -36,7 +36,7 @@ p {
   padding-top: 2%;
   max-width: 15%;
   max-height: 15%;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,8 +55,8 @@ p {
   right: 1;
   bottom: 1;
   display: none;
-  transition: all .5s ease-in-out;
-  padding: .25rem .5rem;
+  transition: all 0.5s ease-in-out;
+  padding: 0.25rem 0.5rem;
   border-radius: 3px;
   color: white;
 }
@@ -96,6 +96,8 @@ h2 {
   outline: #eed8a9 solid 5px;
   outline-offset: 3px;
   background-color: rgb(71, 71, 71);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://www.freewebheaders.com/wp-content/gallery/drinks/awesome-liquors-and-beverages-on-bar-shelves-website-header.jpg);
 }
@@ -106,6 +108,8 @@ h2 {
   outline: #eed8a9 solid 5px;
   outline-offset: 3px;
   background-color: rgb(71, 71, 71);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://images.unsplash.com/photo-1601053397261-2552332609fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);
 }
@@ -116,6 +120,8 @@ h2 {
   outline: #eed8a9 solid 5px;
   outline-offset: 3px;
   background-color: rgb(71, 71, 71);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://images.unsplash.com/photo-1590423859012-39c5ee2845bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
 }
@@ -137,12 +143,44 @@ ul {
   padding-left: 15px;
 }
 
-.searchBtn {
+.searchBtn1 {
+  height: 50px;
+  width: 180px;
+  background-color: rgb(250, 219, 161);
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.searchBtn1:hover {
+  background: rgb(250, 219, 161);
+  color: #222;
+  border-color: #f0c575;
+}
+
+.searchBtn1:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(250, 219, 161);
+}
+
+.searchBtn2 {
   height: 50px;
   width: 140px;
   background-color: rgb(250, 219, 161);
   border-radius: 12px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.searchBtn2:hover {
+  background: rgb(250, 219, 161);
+  color: #222;
+  border-color: #f0c575;
+}
+
+.searchBtn2:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(250, 219, 161);
 }
 
 .pastSearchButton {
