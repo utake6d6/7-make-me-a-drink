@@ -92,28 +92,30 @@
     <!-- drink search form by drink name and by liquor-->
     <div class="grid api-grid">
         <div class="row flex-justify-between">
-            <div class="cell-3">
+            <div class="cell-12">
                 <div class="boxBorder1">
-                    <h2>Type of Drinks</h2>
-                    <input type="text" class="liquorSearch" id="liquor" placeholder="Search for a different liquor"
-                        modifier="underbar" style="display: block;"></input>
-                    <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Search</strong></button>
-                    <ul class="recipeList" id="list"></ul>
-                </div>
-            </div>
-            <div class="cell-3">
-                <div class="boxBorder2">
-                    <h2>Drink Recipe</h2>
-                    <ul id="recipe"></ul>
-                    <div class="drinkPic" id='glass'></div>
-                </div>
-            </div>
-            <div class="cell-3">
-                <div class="boxBorder3">
+
                     <h2>Fun Facts</h2>
                     <ul class="list-group" id="factList"></ul>
                 </div>
             </div>
+            <div class="cell-6">
+                <div class="boxBorder2">
+                <h2>Type of Drinks</h2>
+                <input class="liquorSearch" id="liquor" placeholder="Search for drinks" modifier="underbar"
+                    style="width: 300px;"></input>
+                <button class="searchBtn" onclick="findLiquor('#liquor')"><strong>Search</strong></button>
+                <ul class="recipeList" id="list"></ul>
+                </div>
+            </div>
+            <div class="cell-6">
+                <div class="boxBorder3">
+                <h2>Drink Recipe</h2>
+                <ul id="recipe"></ul>
+                <div class="drinkPic" id='glass'></div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- <div class="gcse-search"></div> -->
