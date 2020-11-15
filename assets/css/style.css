@@ -205,3 +205,54 @@ footer {
   flex-wrap: wrap;
   margin-top: 35px;
 }
+
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .logo {
+    font-size: larger;
+  }
+
+  h2 {
+    font-size: small;
+  }
+
+  h5 {
+    font-size: small;
+  }
+
+  p {
+    font-size: xx-small;
+    width: 100%;
+    margin-inline-start: auto;
+  }
+
+  .pick-drink {
+    max-width: 100%;
+  }
+
+  .searchBtn1,
+  .searchBtn2 {
+    font-family: "Milonga";
+    font-size: 12px;
+    height: 35px;
+    width: 135px;
+    background-color: rgb(250, 219, 161);
+    border-radius: 12px;
+    font-weight: bold;
+  }
+
+  .liquorSearch::placeholder {
+    font-size: xx-small;
+    height: 15px;
+    width: fit-content;
+  }
+
+  .drinks,
+  .recipe {
+    font-family: "Milonga";
+    font-size: small;
+  }
+
+  .drinkPic {
+    padding-left: 5%;
+  }
+}
