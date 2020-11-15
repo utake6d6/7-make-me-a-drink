@@ -29,4 +29,4 @@ Conceive and execute a design with your team that solves a real-world problem by
 
 **Website URL:** https://rachealcolbert.github.io/mix-drinks/
 
-**Screenshot:** ![picture]()
+**Screenshot:** ![picture](https://github.com/rachealcolbert/mix-drinks/blob/main/assets/img/site_pic.png)
