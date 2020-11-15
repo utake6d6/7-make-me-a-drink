@@ -213,6 +213,55 @@ footer {
   margin-top: 35px;
 }
 
+/* Media Query for iPhone */
+@media screen and (max-width: 375px) {
+
+  .logo {
+    font-size: 29px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+    margin: auto;
+  }
+
+  .searchBtn1 {
+    height: 35px;
+    width: 120px;
+    font-size: smaller;
+  }
+
+  .pick-drink h2 {
+    font-size: xx-small;
+    padding: 0;
+    border-radius: 1px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  li a {
+    font-size: 12px;
+  }
+
+  .list-group-item {
+    padding: 0;
+  }
+
+  .drinks {
+    font-size: 12px;
+  }
+
+  #recipe {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 360px) and (max-height: 640px) {
   .logo {
     font-size: larger;
