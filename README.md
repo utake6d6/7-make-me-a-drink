@@ -25,8 +25,8 @@ Conceive and execute a design with your team that solves a real-world problem by
 **WHEN** I click on a drink in the search history\
 **THEN** I am again presented with the recipe again
 
-**Repository URL:** https://github.com/rachealcolbert/mix-drinks
+**Repository URL:** https://github.com/utake6d6/7-make-me-a-drink
 
-**Website URL:** https://rachealcolbert.github.io/mix-drinks/
+**Website URL:** https://utake6d6.github.io/7-mix-drinks/
 
 **Screenshot:** ![](assets/img/site_pic.png)
