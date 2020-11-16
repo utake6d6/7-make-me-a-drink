@@ -1,4 +1,4 @@
-# 7 - Make me a drink!
+# Make me a drink!
 
 ## 7th Module: Group project
 
@@ -29,4 +29,4 @@ Conceive and execute a design with your team that solves a real-world problem by
 
 **Website URL:** https://rachealcolbert.github.io/mix-drinks/
 
-**Screenshot:** ![picture]()
+**Screenshot:** ![](assets/img/site_pic.png)
