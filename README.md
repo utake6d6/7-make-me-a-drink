@@ -27,6 +27,6 @@ Conceive and execute a design with your team that solves a real-world problem by
 
 **Repository URL:** https://github.com/utake6d6/7-make-me-a-drink
 
-**Website URL:** https://utake6d6.github.io/7-mix-drinks/
+**Website URL:** https://utake6d6.github.io/7-make-me-a-drink/
 
 **Screenshot:** ![](assets/img/site_pic.png)
